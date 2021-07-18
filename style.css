@@ -1,0 +1,72 @@
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: rgb(224, 224, 224);
+        }
+
+header {
+    padding: 5px;
+}
+
+        h2,
+        h3,
+        h4 {
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            background-color: rgb(255, 248, 225);
+        }
+
+        aside {
+            width: 40%;
+            background-color: rgb(220, 237, 200);
+            text-align: center;
+        }
+
+        main article {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+/*            padding: 5px;*/
+        }
+
+        main .more {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;    
+            background-color: rgb(255, 248, 225);
+            padding: 5px;
+        }
+
+        main .more article {
+            width: calc(50% - 10px);
+            margin: 5px 0;
+            background-color: rgb(255, 236, 179);
+        }
+
+        /*форматирование для последнего элемента, если он окажется нечетный - Я НЕ ПОНЯЛ КАК ОНО РАБОТАЕТ ))*/
+        main .more article:nth-last-child(-n+2):not(:nth-child(even)) {
+            width: calc(100% - 10px);
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: auto 0;
+            padding: 5px;
+        }
+
+        footer ul li {
+            width: calc(25% - 15px);
+            background-color: rgb(250, 250, 250);
+            text-align: center;
+        }
